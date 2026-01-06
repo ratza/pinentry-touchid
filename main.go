@@ -72,6 +72,10 @@ const (
 	expectedKeyLengthSSH     = 43
 )
 
+func init() {
+	pinentryBinary.Unescape = true
+}
+
 // checkEntryInKeychain executes a search in the current keychain. The search configured to not
 // return the Data stored in the Keychain, as a result this should not require any type of
 // authentication.
